@@ -11,9 +11,9 @@ print("Press the button you wish to use for anti afk and then press enter")
 anti_afk_event = keyboard.record('enter')
 # remove the enter key
 anti_afk_event.remove(anti_afk_event[anti_afk_event.__len__()-1])
-print(anti_afk_event, "is the event")
-print("Anti afk is now active and will trigger between",
-      min_seconds, "and", max_seconds, "seconds, press ctrl + c to stop")
+print(anti_afk_event, "was recorded")
+print("Anti afk is now active and will trigger between\n",
+      min_seconds, "and", max_seconds, "seconds,\npress ctrl + c to stop")
 
 
 def loop_play_untill_not_afk():
