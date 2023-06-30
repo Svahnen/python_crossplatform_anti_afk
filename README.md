@@ -1,6 +1,6 @@
 # python_crossplatform_anti_afk
 
-windows:
+Windows:
 1. pip install keyboard mouse
 2. python main.py
   
