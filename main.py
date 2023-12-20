@@ -3,14 +3,17 @@ import mouse
 import time
 import random
 
-# Enter the minimum and maximum time for random activision in seconds
+# Enter the minimum and maximum time for random activation in seconds
 min_seconds = 180
 max_seconds = 300
 
 print("Press the button you wish to use for anti afk and then press enter")
 anti_afk_event = keyboard.record('enter')
-# remove the enter key
-anti_afk_event.remove(anti_afk_event[anti_afk_event.__len__()-1])
+
+# Filter out the 'enter up/down' event from the recorded events
+anti_afk_event = [event for event in anti_afk_event if event.name !=
+                  'enter']
+
 print(anti_afk_event, "was recorded")
 print("Anti afk is now active and will trigger between\n",
       min_seconds, "and", max_seconds, "seconds,\npress ctrl + c to stop")
